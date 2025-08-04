@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-img: url(./img/oozaru.webp);
+}
+
+body {
+    height: 100dvh;
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    z-index: 0;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container input {
+    font-size: 2rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    height: 50px;
+}
+
+.botoes button {
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
