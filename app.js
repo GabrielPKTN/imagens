@@ -3,8 +3,16 @@
 const botaoTrocaImagem =  document.getElementById('troca-imagem')
 
 function trocarImagem() {
-    const imagem = document.getElementById('nome-imagem').value
-    document.documentElement.style.setProperty('--bg-img', imagem)
+    let nomeImagem = document.getElementById('nome-imagem').value.trim()
+    nomeImagem = nomeImagem.toLowerCase()
+
+    while (nomeImagem.includes(' ')) {
+        nomeImagem = nomeImagem.replace(' ', '_')
+    }
+
+    const caminhoImagem = `url(./img/${nomeImagem}`
+
+    document.documentElement.style.setProperty('--bg-img', `${caminhoImagem}.jpg)`)
 }
 
 botaoTrocaImagem.addEventListener('click', trocarImagem)
