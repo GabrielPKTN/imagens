@@ -5,7 +5,8 @@
 }
 
 :root {
-    --bg-img: url(./img/yu\ yu\ hakusho.jpg);
+    --bg-img: url(./img/yu_yu_hakusho.jpg);
+    --bg-auto: null;
 }
 
 body {
@@ -15,7 +16,25 @@ body {
     background-size: cover;
     object-fit: cover;
     z-index: 0;
+    animation: var(--bg-auto);
 }
+
+@keyframes slider {
+    0%, 16% {
+        background-image: url(./img/black_clover.jpg);
+    } 17%, 33% {
+        background-image: url(./img/mushoku_tensei.jpg);
+    } 34%, 50% {
+        background-image: url(./img/one_punch_man.jpg);
+    } 51%, 67% {
+        background-image: url(./img/pokemon.jpg);
+    } 68%, 83% {
+        background-image: url(./img/solo_leveling.jpg);
+    } 84%, 100% {
+        background-image: url(./img/yu_yu_hakusho.jpg);
+    }
+}
+
 
 main {
     height: 100%;
