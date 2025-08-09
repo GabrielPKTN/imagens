@@ -8,8 +8,20 @@ function slideFade() {
 }
 
 function trocarImagem() {
+
+    const imagens = ['', 'black clover', 'mushoku tensei', 'one punch man', 'pokemon', 'solo leveling', 'yu yu hakusho']
+
     document.documentElement.style.setProperty('--bg-auto', '')
     let nomeImagem = document.getElementById('nome-imagem').value.trim()
+
+    if (!isNaN(nomeImagem)) {
+        for (let anime of imagens) {
+            if (nomeImagem == imagens.indexOf(anime)) {
+                nomeImagem = anime
+            }
+        }
+    }
+
     nomeImagem = nomeImagem.toLowerCase()
 
     while (nomeImagem.includes(' ')) {
